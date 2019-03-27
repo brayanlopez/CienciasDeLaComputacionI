@@ -1,5 +1,10 @@
+*{
+  align-content: center;
+}
 div{
-    border: 1px dashed green;
+    border: 1px solid green;
+    display: inline-block;
     color: red;
-    background-color: blue;
+    font-family: arabic-indic;
+    font-size: 10;
 }
