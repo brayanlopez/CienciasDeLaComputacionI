@@ -14,9 +14,9 @@ function burbuja(arreglo, tamano) {
                 ordenado[j] = temporal;
             }
         }
-//        contador += 1;
+        contador += 1;
     }
-  //  contador += 2;
+    contador += 2;
     return ordenado;
 }
 ;
@@ -36,20 +36,20 @@ function burbujaDescendente(arreglo, tamano) {
 }
 ;
 /*
-function generarVector(tamano) {
-    var vector = [10];
-    for (var i = 0; i < tamano; i++) {
-        vector[i] = Math.floor(Math.random() * 100);
-    }
-    return vector;
-}
-;
-*/
+ function generarVector(tamano) {
+ var vector = [10];
+ for (var i = 0; i < tamano; i++) {
+ vector[i] = Math.floor(Math.random() * 100);
+ }
+ return vector;
+ }
+ ;
+ */
 
 function generarVector(tamano) {
     var vector = [10];
     for (var i = 0; i < tamano; i++) {
-        vector[i] = 100-i;
+        vector[i] = 100 - i;
     }
     return vector;
 }
@@ -58,7 +58,7 @@ function generarVector(tamano) {
 //6n^2-3
 
 function init() {
-    var tamano = 10;
+    var tamano = 5;
     var arreglo = generarVector(tamano);
     var generar = document.getElementById("generar");
     var vector = document.getElementById("vector");
