@@ -1,4 +1,5 @@
 var contador;
+var tamano;
 
 function burbuja(arreglo, tamano) {
     var ordenado = arreglo;
@@ -7,8 +8,8 @@ function burbuja(arreglo, tamano) {
     for (var i = 0; i <= tamano - 1; i++) {
         contador += 5;
         for (var j = i + 1; j < tamano; j++) {
-          contador +=5;
-          if (ordenado[i] >= ordenado[j]) {
+            contador += 5;
+            if (ordenado[i] >= ordenado[j]) {
                 var temporal = ordenado[i];
                 ordenado[i] = ordenado[j];
                 ordenado[j] = temporal;
@@ -59,8 +60,8 @@ function generarVector(tamano) {
 
 //6n^2-3
 
-function init() {
-    var tamano = document.getElementById("tamano").value;
+function init(a) {
+    //tamano = a;
 //    var tamano = 10;
     var arreglo = generarVector(tamano);
     var generar = document.getElementById("generar");
@@ -72,10 +73,13 @@ function init() {
     arreglo = burbuja(arreglo, tamano);
 
     generar.onclick = function (e) {
-        vector.textContent = arreglo;
+//        alert(document.getElementById("info").value);
+        tamano = document.getElementById("info").value;
+        arreglo = generarVector(tamano);
+        arreglo = burbuja(arreglo, tamano);
+        vector.textContent = "vector: " + arreglo;
         porContador.textContent = contador;
-        //porFormula.textContent = (Math.pow(tamano, 2)*6) - 3;
-      porFormula.textContent = (6*Math.pow(tamano, 2)) - 3;
+        porFormula.textContent = (6 * Math.pow(tamano, 2)) - 3;
     };
 }
 ;
