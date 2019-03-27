@@ -7,16 +7,18 @@ function burbuja(arreglo, tamano) {
     for (var i = 0; i <= tamano - 1; i++) {
         contador += 5;
         for (var j = i + 1; j < tamano; j++) {
-            if (ordenado[i] > ordenado[j]) {
-                contador += 7;
+          contador +=5;
+          if (ordenado[i] >= ordenado[j]) {
                 var temporal = ordenado[i];
                 ordenado[i] = ordenado[j];
                 ordenado[j] = temporal;
+                contador += 7;
             }
         }
         contador += 1;
     }
     contador += 2;
+    contador -= 6;
     return ordenado;
 }
 ;
@@ -47,7 +49,7 @@ function burbujaDescendente(arreglo, tamano) {
  */
 
 function generarVector(tamano) {
-    var vector = [10];
+    var vector = [tamano];
     for (var i = 0; i < tamano; i++) {
         vector[i] = 100 - i;
     }
@@ -58,7 +60,8 @@ function generarVector(tamano) {
 //6n^2-3
 
 function init() {
-    var tamano = 5;
+    var tamano = document.getElementById("tamano").value;
+//    var tamano = 10;
     var arreglo = generarVector(tamano);
     var generar = document.getElementById("generar");
     var vector = document.getElementById("vector");
@@ -71,8 +74,8 @@ function init() {
     generar.onclick = function (e) {
         vector.textContent = arreglo;
         porContador.textContent = contador;
-        porFormula.textContent = Math.pow(6, 2) * tamano - 3;
+        //porFormula.textContent = (Math.pow(tamano, 2)*6) - 3;
+      porFormula.textContent = (6*Math.pow(tamano, 2)) - 3;
     };
 }
 ;
-
