@@ -38,48 +38,67 @@ function burbujaDescendente(arreglo, tamano) {
     return ordenado;
 }
 ;
-/*
- function generarVector(tamano) {
- var vector = [10];
- for (var i = 0; i < tamano; i++) {
- vector[i] = Math.floor(Math.random() * 100);
- }
- return vector;
- }
- ;
- */
 
 function generarVector(tamano) {
-    var vector = [tamano];
+    var vector = [10];
     for (var i = 0; i < tamano; i++) {
-        vector[i] = 100 - i;
+        vector[i] = Math.floor(Math.random() * 100);
     }
     return vector;
 }
 ;
 
-//6n^2-3
-
 function init(a) {
-    //tamano = a;
-//    var tamano = 10;
-    var arreglo = generarVector(tamano);
-    var generar = document.getElementById("generar");
-    var vector = document.getElementById("vector");
-    var porContador = document.getElementById("porContador");
-    var porFormula = document.getElementById("porFormula");
 
-//    arreglo = burbujaDescendente(arreglo,5);
-    arreglo = burbuja(arreglo, tamano);
+    //Variables
+
+    var arreglo1;
+    var arreglo2;
+    var arreglo3;
+    var generar = document.getElementById("generar");
+    var vectorPeor = document.getElementById("vectorPeor");
+    var porContadorPeor = document.getElementById("porContadorPeor");
+    var porFormulaPeor = document.getElementById("porFormulaPeor");
+    var vectorMedio = document.getElementById("vectorMedio");
+    var porContadorMedio = document.getElementById("porContadorMedio");
+    var porFormulaMedio = document.getElementById("porFormulaMedio");
+    var vectorMejor = document.getElementById("vectorMejor");
+    var porContadorMejor = document.getElementById("porContadorMejor");
+    var porFormulaMejor = document.getElementById("porFormulaMejor");
+
 
     generar.onclick = function (e) {
-//        alert(document.getElementById("info").value);
         tamano = document.getElementById("info").value;
-        arreglo = generarVector(tamano);
-        arreglo = burbuja(arreglo, tamano);
-        vector.textContent = "vector: " + arreglo;
-        porContador.textContent = contador;
-        porFormula.textContent = (6 * Math.pow(tamano, 2)) - 3;
+
+        if (tamano < 0 || tamano == " ") {
+            alert("fuera de rango");
+        } else {
+            arreglo1 = generarVector(tamano);
+            arreglo1 = burbujaDescendente(arreglo1, tamano);
+            arreglo1 = burbuja(arreglo1, tamano);
+
+            vectorPeor.textContent = "vector: " + arreglo1;
+            porContadorPeor.textContent = contador;
+            porFormulaPeor.textContent = (6 * Math.pow(tamano, 2)) - 3; //peor caso: 6n^2-3
+
+
+            arreglo2 = generarVector(tamano);
+            arreglo2 = burbuja(arreglo2, tamano);
+
+            vectorMedio.textContent = "vector: " + arreglo2;
+            porContadorMedio.textContent = contador;
+            porFormulaMedio.textContent = (6 * Math.pow(tamano, 2)) - 3; //peor caso: 6n^2-3
+
+
+            arreglo3 = generarVector(tamano);
+            arreglo3 = burbuja(arreglo3, tamano);
+            arreglo3 = burbuja(arreglo3, tamano);
+
+            vectorMejor.textContent = "vector: " + arreglo2;
+            porContadorMejor.textContent = contador;
+            porFormulaMejor.textContent = (6 * Math.pow(tamano, 2)) - 3; //peor caso: 6n^2-3
+
+        }
     };
 }
 ;

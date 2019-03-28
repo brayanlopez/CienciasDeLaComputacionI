@@ -6,14 +6,47 @@
         <link type = "text/css" rel="stylesheet" href="estilos.css"/>
     </head>
     <body onload="init();">
+        <h1>Metodo de ordenamiento por burbuja</h1>
+        <p>
+            A continuacion se genera un vector con numeros aleatorios, se ordenan
+            usando el metodo burbuja y se presenta la cantidad de operaciones fundamentales
+            que se tienen que realizar para el peor caso, el mejor y el caso promedio.
+            Se calcula teniendo en cuenta la formula y un contandor.
+        </p>
         <button id="generar"> generar vector</button>
         <input type="number" id="info" ><br>
-        <div id="vector">vector: </div> <br>
+        <h2>peor caso</h2>
+        <p>
+            La formula usada es 6n^2-3
+        </p>
+        <div id="vectorPeor">vector: </div> <br>
         <div>
-            cantidad por contador: <span id="porContador"> </span>
+            cantidad por contador: <span id="porContadorPeor"> </span>
         </div>
         <div>
-            cantidad por formula: <span id="porFormula"></span>
+            cantidad por formula: <span id="porFormulaPeor"></span>
+        </div>
+        <h2>caso promedio</h2>
+        <p>
+            La formula usada es 6n^2-3
+        </p>
+        <div id="vectorMedio">vector: </div> <br>
+        <div>
+            cantidad por contador: <span id="porContadorMedio"> </span>
+        </div>
+        <div>
+            cantidad por formula: <span id="porFormulaMedio"></span>
+        </div>
+        <h2>mejor caso</h2>
+        <p>
+            La formula usada es 6n^2-3
+        </p>
+        <div id="vectorMejor">vector: </div> <br>
+        <div>
+            cantidad por contador: <span id="porContadorMejor"> </span>
+        </div>
+        <div>
+            cantidad por formula: <span id="porFormulaMejor"></span>
         </div>
     </body>
 </html>
