@@ -95,7 +95,7 @@ function init(a) {
             arreglo3 = burbuja(arreglo3, tamano);
 
             vectorMejor.textContent = "vector: " + arreglo3;
-            porContadorMejor.textContent = (5 * Math.pow(tamano, 2) + 7 * tamano - 6) / 2;
+            porContadorMejor.textContent = contador;
             porFormulaMejor.textContent = (5 * Math.pow(tamano, 2) + 7 * tamano - 6) / 2; //mejor caso: (5n^2+7n-6)/2
 
         }

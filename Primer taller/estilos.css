@@ -7,7 +7,7 @@ body{
 }
 
 footer{
-    
+    font-family: courier new;
 }
 
 div{
@@ -17,6 +17,12 @@ div{
     font-family: arabic-indic;
     font-size: 10;
 }
+#grafica{
+    background-color: red;
+    height: 500px;
+    width: 500px
+}
+
 /*
 #mejor{
     background-color: greenyellow;
