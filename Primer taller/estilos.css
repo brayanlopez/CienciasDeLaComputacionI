@@ -1,9 +1,13 @@
 *{
-  align-content: center;
+    align-content: center;
 }
 
 body{
     background-color: beige;
+}
+
+footer{
+    
 }
 
 div{
@@ -13,3 +17,14 @@ div{
     font-family: arabic-indic;
     font-size: 10;
 }
+/*
+#mejor{
+    background-color: greenyellow;
+}
+
+#promedio{
+    background-color: yellow;
+}
+#peor{
+    background-color: red;
+}*/

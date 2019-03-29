@@ -6,47 +6,63 @@
         <link type = "text/css" rel="stylesheet" href="estilos.css"/>
     </head>
     <body onload="init();">
-        <h1>Metodo de ordenamiento por burbuja</h1>
+        <header>
+            <h1>Metodo de ordenamiento por burbuja</h1>
+        </header>
         <p>
             A continuacion se genera un vector con numeros aleatorios, se ordenan
             usando el metodo burbuja y se presenta la cantidad de operaciones fundamentales
             que se tienen que realizar para el peor caso, el mejor y el caso promedio.
-            Se calcula teniendo en cuenta la formula y un contandor.
+            Se calcula teniendo en cuenta la formula y un contandor.<br>
+            Ingrese un numero entre 1 y 100.
         </p>
         <button id="generar"> generar vector</button>
-        <input type="number" id="info" ><br>
-        <h2>peor caso</h2>
-        <p>
-            La formula usada es 6n^2-3
-        </p>
-        <div id="vectorPeor">vector: </div> <br>
-        <div>
-            cantidad por contador: <span id="porContadorPeor"> </span>
-        </div>
-        <div>
-            cantidad por formula: <span id="porFormulaPeor"></span>
-        </div>
-        <h2>caso promedio</h2>
-        <p>
-            La formula usada es 6n^2-3
-        </p>
-        <div id="vectorMedio">vector: </div> <br>
-        <div>
-            cantidad por contador: <span id="porContadorMedio"> </span>
-        </div>
-        <div>
-            cantidad por formula: <span id="porFormulaMedio"></span>
-        </div>
-        <h2>mejor caso</h2>
-        <p>
-            La formula usada es 6n^2-3
-        </p>
-        <div id="vectorMejor">vector: </div> <br>
-        <div>
-            cantidad por contador: <span id="porContadorMejor"> </span>
-        </div>
-        <div>
-            cantidad por formula: <span id="porFormulaMejor"></span>
-        </div>
+        <input type="number" id="info" max="100" min="1"><br>
+        <section id="peor">
+            <h2>peor caso</h2>
+            <p>
+                La formula usada es 6n^2-3
+            </p>
+            <div id="vectorPeor">vector: </div> <br>
+            <div>
+                cantidad por contador: <span id="porContadorPeor"> </span>
+            </div>
+            <div>
+                cantidad por formula: <span id="porFormulaPeor"></span>
+            </div>
+
+        </section>
+        <section id="promedio">
+            <h2>caso promedio</h2>
+            <p>
+                La formula usada es (17n^2+7n-12)/4
+            </p>
+            <div id="vectorMedio">vector: </div> <br>
+            <div>
+                cantidad por contador: <span id="porContadorMedio"> </span>
+            </div>
+            <div>
+                cantidad por formula: <span id="porFormulaMedio"></span>
+            </div>
+        </section>
+        <section id="mejor">
+            <h2>mejor caso</h2>
+            <p>
+                La formula usada es (5n^2+7n-6)/2
+            </p>
+            <div id="vectorMejor">vector: </div> <br>
+            <div>
+                cantidad por contador: <span id="porContadorMejor"> </span>
+            </div>
+            <div>
+                cantidad por formula: <span id="porFormulaMejor"></span>
+            </div>
+        </section>
+        <footer>
+            <br>
+            Hecho por: <br>
+            Brayan A. Lopez G. <br>
+            Dannyr Gustavo Garcia Cardozo
+        </footer>
     </body>
 </html>

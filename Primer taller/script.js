@@ -70,7 +70,7 @@ function init(a) {
     generar.onclick = function (e) {
         tamano = document.getElementById("info").value;
 
-        if (tamano < 0 || tamano == " ") {
+        if (tamano < 0 || tamano > 100) {
             alert("fuera de rango");
         } else {
             arreglo1 = generarVector(tamano);
@@ -87,7 +87,7 @@ function init(a) {
 
             vectorMedio.textContent = "vector: " + arreglo2;
             porContadorMedio.textContent = contador;
-            porFormulaMedio.textContent = (17 * Math.pow(tamano, 2)+7*tamano-12) / 4; //caso promedio: (17n^2+7n-12)/4
+            porFormulaMedio.textContent = (17 * Math.pow(tamano, 2) + 7 * tamano - 12) / 4; //caso promedio: (17n^2+7n-12)/4
 
 
             arreglo3 = generarVector(tamano);
@@ -95,8 +95,8 @@ function init(a) {
             arreglo3 = burbuja(arreglo3, tamano);
 
             vectorMejor.textContent = "vector: " + arreglo3;
-            porContadorMejor.textContent = contador;
-            porFormulaMejor.textContent = (5 * Math.pow(tamano, 2)+7*tamano-6) / 2; //mejor caso: (5n^2+7n-6)/2
+            porContadorMejor.textContent = (5 * Math.pow(tamano, 2) + 7 * tamano - 6) / 2;
+            porFormulaMejor.textContent = (5 * Math.pow(tamano, 2) + 7 * tamano - 6) / 2; //mejor caso: (5n^2+7n-6)/2
 
         }
     };
